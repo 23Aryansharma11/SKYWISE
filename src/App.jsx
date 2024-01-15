@@ -9,6 +9,10 @@ const App = () => {
   const [city, setcity] = useState('Delhi')
   const [weather, setweather] = useState(null)
   const [units, setunits] = useState('metric')
+  const date = new Date();
+  let day = date.getDate();
+  let month = date.getMonth()+1;//Months starts from 0
+  let year = date.getFullYear();
   useEffect(() => {
     const fetchweather= async ()=>{
       const data = await getFromattedWeatherData(city,units)
@@ -65,8 +69,9 @@ const App = () => {
                     <img src={weather.iconUrl} alt='Weather Icon'/>
                     <h3>{weather.description}</h3>
                 </div>
-                <div className='temp text-5xl'>
-                    <h1>{`${weather.temp.toFixed()} °${units==='metric'?'C':'F'}`}</h1>
+                <div className='temp flex flex-col'>
+                    <h1 className='text-5xl mb-14'>{`${weather.temp.toFixed()} °${units==='metric'?'C':'F'}`}</h1>
+                   <h6 className='m-0 p-2'>{`${day}/${month<10?`0${month}`:`${month}`}/${year}`}</h6>
                 </div>
             </div>
             {/* bottom Description */}
