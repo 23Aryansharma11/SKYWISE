@@ -3,9 +3,9 @@ import Card from './Components/Card'
 import getFromattedWeatherData from './service/WeatherService'
 import ColdBg from './assets/Cold.jpg'
 import HotBg from './assets/HOT.jpg'
-
+import Load from './assets/Load.jpg'
 const App = () => {
-  const [bgr, setbg] = useState(HotBg)
+  const [bgr, setbg] = useState(Load)
   const [city, setcity] = useState('Delhi')
   const [weather, setweather] = useState(null)
   const [units, setunits] = useState('metric')
