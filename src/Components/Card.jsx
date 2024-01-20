@@ -35,7 +35,7 @@ const Card = ({weather, ChangeUnit, enterKeyPressed, units, currentDate
                 </div>
                 <div className='temp flex flex-col'>
                     <h1 className='text-5xl mb-14'>{`${weather.temp.toFixed()} °${units==='metric'?'C':'F'}`}</h1>
-                   <h6 className='m-0 p-2'>{`${currentDate.day}/${currentDate.currentDate.month<10?`0${currentDate.currentDate.month}`:`${currentDate.currentDate.month}`}/${currentDate.year}`}</h6>
+                   <h6 className='m-0 p-2'>{`${currentDate.day}/${currentDate.month<10?`0${currentDate.month}`:`${currentDate.month}`}/${currentDate.year}`}</h6>
                 </div>
             </div>
             {/* bottom Description */}
