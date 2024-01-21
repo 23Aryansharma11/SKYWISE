@@ -1,3 +1,4 @@
 1. Forecast: create a seperate Forecast component the object used to fetch weather gives the lat & long of a place use that info to hit another API. show the weather forecast of the whole week. Make a button to route to the forecast page and same button hits the hook. 
 2. Country Search: User should be able to search for their country for example instead of "delhi" , user should be capable of searching for "delhi,in". Handle the url accordingly 
 3. Animation: Add animations and loaders.
+4. Environment Variables: Add .env file manage it on netlify.
