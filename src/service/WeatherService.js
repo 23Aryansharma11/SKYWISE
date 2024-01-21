@@ -1,4 +1,4 @@
-const apiKey = '782ac01d7c94ec49d9d820fad924c4d9'
+const apiKey = (import.meta.env.VITE_API_KEY)
 
 const makeIconUrl = (iconId)=> `https://openweathermap.org/img/wn/${iconId}@2x.png`
 
